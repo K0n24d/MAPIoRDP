@@ -402,14 +402,15 @@ void cMAPISaveMail(ArchiveIn & ai, ArchiveOut & ao)
 {
 	LHANDLE       lhSession;
 	ULONG_PTR     ulUIParam;
-	MapiMessage   Message;
+	lpMapiMessage lpMessage;
 	FLAGS         flFlags;
 	ULONG         ulReserved;
 	LPSTR         lpszMessageID;
 
 	ai >> lhSession;
 	ai >> ulUIParam;
-	ai >> Message;
+	lpMessage = (lpMapiMessage)malloc(sizeof(MapiMessage));
+	ai >> *lpMessage;
 	ai >> flFlags;
 	ai >> ulReserved;
 	load_c_str(ai, lpszMessageID);
@@ -425,10 +426,11 @@ void cMAPISaveMail(ArchiveIn & ai, ArchiveOut & ao)
 	}
 	else
 	{
-		rc = lpMAPISaveMail(lhSession, ulUIParam, &Message, flFlags, ulReserved, lpszMessageID);
+		rc = lpMAPISaveMail(lhSession, ulUIParam, lpMessage, flFlags, ulReserved, lpszMessageID);
 		ao << rc;
 		free(lpszMessageID);
-		FreeMAPIMessage(&Message);
+		cleanup_files(*lpMessage);
+		FreeMAPIMessage(lpMessage);
 	}
 }
 
@@ -473,13 +475,14 @@ void cMAPISendMail(ArchiveIn & ai, ArchiveOut & ao)
 {
 	LHANDLE         lhSession;
 	ULONG_PTR       ulUIParam;
-	MapiMessage     Message;
+	lpMapiMessage   lpMessage;
 	FLAGS           flFlags;
 	ULONG           ulReserved;
 
 	ai >> lhSession;
 	ai >> ulUIParam;
-	ai >> Message;
+	lpMessage = (lpMapiMessage)malloc(sizeof(MapiMessage));
+	ai >> *lpMessage;
 	ai >> flFlags;
 	ai >> ulReserved;
 
@@ -494,10 +497,10 @@ void cMAPISendMail(ArchiveIn & ai, ArchiveOut & ao)
 	}
 	else
 	{
-		rc = lpMAPISendMail(lhSession, ulUIParam, &Message, flFlags, ulReserved);
+		rc = lpMAPISendMail(lhSession, ulUIParam, lpMessage, flFlags, ulReserved);
 		ao << rc;
-		cleanup_files(Message);
-		FreeMAPIMessage(&Message);
+		cleanup_files(*lpMessage);
+		FreeMAPIMessage(lpMessage);
 	}
 }
 
@@ -506,13 +509,14 @@ void cMAPISendMailHelper(ArchiveIn & ai, ArchiveOut & ao)
 {
 	LHANDLE         lhSession;
 	ULONG_PTR       ulUIParam;
-	MapiMessage     Message;
+	lpMapiMessage   lpMessage;
 	FLAGS           flFlags;
 	ULONG           ulReserved;
 
 	ai >> lhSession;
 	ai >> ulUIParam;
-	ai >> Message;
+	lpMessage = (lpMapiMessage)malloc(sizeof(MapiMessage));
+	ai >> *lpMessage;
 	ai >> flFlags;
 	ai >> ulReserved;
 
@@ -527,10 +531,10 @@ void cMAPISendMailHelper(ArchiveIn & ai, ArchiveOut & ao)
 	}
 	else
 	{
-		rc = lpMAPISendMailHelper(lhSession, ulUIParam, &Message, flFlags, ulReserved);
+		rc = lpMAPISendMailHelper(lhSession, ulUIParam, lpMessage, flFlags, ulReserved);
 		ao << rc;
-		cleanup_files(Message);
-		FreeMAPIMessage(&Message);
+		cleanup_files(*lpMessage);
+		FreeMAPIMessage(lpMessage);
 	}
 }
 
