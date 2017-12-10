@@ -1,3 +1,10 @@
+Section "Resources" SEC02
+  SetOverwrite try
+
+  SetOutPath "$INSTDIR"
+  File "..\..\LICENSE"
+SectionEnd
+
 Section -Post
   WriteUninstaller "$INSTDIR\uninst.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
