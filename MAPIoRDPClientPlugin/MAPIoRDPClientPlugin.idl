@@ -1,0 +1,42 @@
+// MAPIoRDPClientPlugin.idl : source IDL pour MAPIoRDPClientPlugin
+//
+
+// Ce fichier sera traité par l'outil MIDL pour
+// produire la bibliothèque de types (MAPIoRDPClientPlugin.tlb) et le code de marshaling.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(a817e7a2-43fa-11d0-9e44-00aa00b6770a),
+	dual,	
+	pointer_default(unique)
+]
+interface IComponentRegistrar : IDispatch
+{
+	[id(1)]	HRESULT Attach([in] BSTR bstrPath);
+	[id(2)]	HRESULT RegisterAll();
+	[id(3)]	HRESULT UnregisterAll();
+	[id(4)]	HRESULT GetComponents([out] SAFEARRAY(BSTR)* pbstrCLSIDs, [out] SAFEARRAY(BSTR)* pbstrDescriptions);
+	[id(5)]	HRESULT RegisterComponent([in] BSTR bstrCLSID);
+	[id(6)] HRESULT UnregisterComponent([in] BSTR bstrCLSID);
+};
+
+[
+	uuid(4A3F895D-FDA5-4BC8-AFCD-4D7722B940C1),
+	version(1.0),
+	custom(a817e7a1-43fa-11d0-9e44-00aa00b6770a,"{E7EEDFA9-437A-46C0-9B82-0F0C86B4D41C}")
+]
+library MAPIoRDPClientPluginLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(E7EEDFA9-437A-46C0-9B82-0F0C86B4D41C)
+	]
+	coclass MAPIoRDPClientPlugin
+	{
+		[default] interface IComponentRegistrar;
+	};
+};
+

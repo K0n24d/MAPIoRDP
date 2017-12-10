@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MAPIoRDPServerModule", "MAPIoRDPServerModule\MAPIoRDPServerModule.vcxproj", "{C75280EB-A72E-4F04-8AE3-E2155699258D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests", "UnitTests\UnitTests.vcxproj", "{3AE47CCE-E483-489C-BF73-63D89B876E6B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MAPIoRDPMailto", "MAPIoRDPMailto\MAPIoRDPMailto.vcxproj", "{5030AA76-AFA6-4BFC-86BC-CC26E299434C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MAPIoRDPClientPlugin", "MAPIoRDPClientPlugin\MAPIoRDPClientPlugin.vcxproj", "{3416B209-EFD3-42C8-A467-5ACB625C2C85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C75280EB-A72E-4F04-8AE3-E2155699258D}.Debug|x64.ActiveCfg = Debug|x64
+		{C75280EB-A72E-4F04-8AE3-E2155699258D}.Debug|x64.Build.0 = Debug|x64
+		{C75280EB-A72E-4F04-8AE3-E2155699258D}.Debug|x86.ActiveCfg = Debug|Win32
+		{C75280EB-A72E-4F04-8AE3-E2155699258D}.Debug|x86.Build.0 = Debug|Win32
+		{C75280EB-A72E-4F04-8AE3-E2155699258D}.Release|x64.ActiveCfg = Release|x64
+		{C75280EB-A72E-4F04-8AE3-E2155699258D}.Release|x64.Build.0 = Release|x64
+		{C75280EB-A72E-4F04-8AE3-E2155699258D}.Release|x86.ActiveCfg = Release|Win32
+		{C75280EB-A72E-4F04-8AE3-E2155699258D}.Release|x86.Build.0 = Release|Win32
+		{3AE47CCE-E483-489C-BF73-63D89B876E6B}.Debug|x64.ActiveCfg = Debug|x64
+		{3AE47CCE-E483-489C-BF73-63D89B876E6B}.Debug|x64.Build.0 = Debug|x64
+		{3AE47CCE-E483-489C-BF73-63D89B876E6B}.Debug|x86.ActiveCfg = Debug|Win32
+		{3AE47CCE-E483-489C-BF73-63D89B876E6B}.Debug|x86.Build.0 = Debug|Win32
+		{3AE47CCE-E483-489C-BF73-63D89B876E6B}.Release|x64.ActiveCfg = Release|x64
+		{3AE47CCE-E483-489C-BF73-63D89B876E6B}.Release|x64.Build.0 = Release|x64
+		{3AE47CCE-E483-489C-BF73-63D89B876E6B}.Release|x86.ActiveCfg = Release|Win32
+		{3AE47CCE-E483-489C-BF73-63D89B876E6B}.Release|x86.Build.0 = Release|Win32
+		{5030AA76-AFA6-4BFC-86BC-CC26E299434C}.Debug|x64.ActiveCfg = Debug|x64
+		{5030AA76-AFA6-4BFC-86BC-CC26E299434C}.Debug|x64.Build.0 = Debug|x64
+		{5030AA76-AFA6-4BFC-86BC-CC26E299434C}.Debug|x86.ActiveCfg = Debug|Win32
+		{5030AA76-AFA6-4BFC-86BC-CC26E299434C}.Debug|x86.Build.0 = Debug|Win32
+		{5030AA76-AFA6-4BFC-86BC-CC26E299434C}.Release|x64.ActiveCfg = Release|x64
+		{5030AA76-AFA6-4BFC-86BC-CC26E299434C}.Release|x64.Build.0 = Release|x64
+		{5030AA76-AFA6-4BFC-86BC-CC26E299434C}.Release|x86.ActiveCfg = Release|Win32
+		{5030AA76-AFA6-4BFC-86BC-CC26E299434C}.Release|x86.Build.0 = Release|Win32
+		{3416B209-EFD3-42C8-A467-5ACB625C2C85}.Debug|x64.ActiveCfg = Debug|x64
+		{3416B209-EFD3-42C8-A467-5ACB625C2C85}.Debug|x64.Build.0 = Debug|x64
+		{3416B209-EFD3-42C8-A467-5ACB625C2C85}.Debug|x86.ActiveCfg = Debug|Win32
+		{3416B209-EFD3-42C8-A467-5ACB625C2C85}.Debug|x86.Build.0 = Debug|Win32
+		{3416B209-EFD3-42C8-A467-5ACB625C2C85}.Release|x64.ActiveCfg = Release|x64
+		{3416B209-EFD3-42C8-A467-5ACB625C2C85}.Release|x64.Build.0 = Release|x64
+		{3416B209-EFD3-42C8-A467-5ACB625C2C85}.Release|x86.ActiveCfg = Release|Win32
+		{3416B209-EFD3-42C8-A467-5ACB625C2C85}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

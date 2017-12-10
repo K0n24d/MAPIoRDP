@@ -1,0 +1,18 @@
+LIBRARY         MAPIoRDPServerModule.dll
+
+EXPORTS
+;        GetMapiDllVersion
+        MAPIAddress
+        MAPIDeleteMail
+        MAPIDetails
+        MAPIFindNext
+        MAPIFreeBuffer
+        MAPILogoff
+        MAPILogon
+        MAPIReadMail
+        MAPIResolveName
+        MAPISaveMail
+        MAPISendDocuments
+        MAPISendMail
+        MAPISendMailHelper
+        MAPISendMailW
